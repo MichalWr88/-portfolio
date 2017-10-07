@@ -1,0 +1,389 @@
+// main style
+.banner {
+    height: calc(100vh - #{$main-top});
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    // background-color:$color-3;
+    // z-index:99999999;
+
+}
+
+.banner__wrapper {
+    position: relative;
+    height: auto;
+    overflow: hidden; // height:1px;
+    // box-shadow:0px 0px 30px 2px $color-5; 
+}
+
+.banner__header {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding: 0;
+    letter-spacing: 0rem;
+    margin: 0;
+
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        height: 15px;
+        background-color: $color-5;
+    }
+    &::after {
+        bottom: -8px;
+        left: 0;
+        right: 0;
+    }
+    &::before {
+        top: -8px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.banner__workplace {
+    font-family: 'Raleway', sans-serif;
+    z-index: 3;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0; // bottom: 40%;
+    padding: 10px 0;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 1.8rem;
+    background-color: $color-3;
+    text-transform: uppercase;
+}
+.banner__info{
+font-size:3.5rem;
+text-transform:uppercase;
+text-shadow:1px 1px 5px  red;
+}
+.banner__start {
+    @extend .btn;
+    font-size: 2rem;
+}
+
+/* ABOUT */
+.about{
+  background-color:$color-4;
+  padding:20px;
+}
+.about__profile{
+  background-image: url('../images/profile.jpg');
+  background-size:cover;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+   margin:0 auto;
+}
+.profile__content{
+  font-size:1.5rem;
+  letter-spacing:1px;
+  text-align:justify;
+  line-height:1.8rem;
+  text-indent: 30px;
+
+}
+.about__courses{
+
+
+}
+.courses__header{
+font-size:2.0rem;
+text-transform:uppercase;
+margin:10px 0;
+}
+.courses__list{
+list-style-type:none;
+padding:5px;
+}
+.courses__elem{
+font-size:1.5rem;
+line-height:1.8rem;
+margin-bottom:5px;
+}
+
+/* SKILLS */
+
+.skills{
+padding:10px;
+
+}
+.skills__list{
+display:flex;
+justify-content:space-around;
+flex-direction:row;
+flex-wrap:wrap;
+padding:0;
+}
+.skills__elem{
+  position:relative;
+list-style-type:none;
+height:200px;
+width:100%;
+background-color:$color-1;
+margin:10px;
+box-sizing:border-box;
+overflow:hidden;
+}
+.skills__icon{
+  height:80px;
+  margin:auto;
+  margin:10px;
+  float: left;
+}
+.skills__icon-sm{
+  width:60px;
+}
+.skills__details{
+
+font-size:1.5rem;
+height:80%;
+padding:10px;
+
+&::after{
+  content:'';
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+background: linear-gradient(to bottom, rgba($color-1,0) 60%,rgba($color-1,0.8) 70%,$color-1 80%);
+}
+
+}
+.skills__content{
+  height:80%;
+}
+.skills__btn{
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+  margin:0 auto;
+}
+/* PORTFOLIO */
+
+.portfolio {
+  position:relative;
+    background-color: $color-2;
+    padding: 20px;
+    padding-top:80px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+
+}
+.portfolio__header{
+  position:absolute;
+  top:0px;
+  left:20px;
+  &::after,
+     &::before {
+
+        background-color: $color-2;
+
+    }
+}
+.portfolio__box {
+    max-width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    box-shadow: 0px 0px 30px 2px $color-5;
+    margin:5px;
+}
+
+.box__content {
+    flex-basis:50%;
+    background-color: $color-1;
+    margin: 0;
+    padding: 5px; 
+    box-sizing: border-box;
+    padding:20px;
+    text-align:center;
+}
+
+.box__name{
+  font-size:2rem;
+text-transform:uppercase;
+font-family: 'Raleway', sans-serif;
+margin: 40px auto;
+}
+
+
+
+
+
+
+.box__link{
+  display:inline-block;
+  position:relative;
+  font-size:2rem;
+  text-decoration:none;
+  text-transform:uppercase;
+  padding:5px 10px;
+  border: 1px solid black;
+border-radius:5px;
+  width:50px;
+  margin:10px 20px;
+  background-color:$color-5;
+  color:$color-1;
+transition: .6s;
+
+
+    &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 102%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: darken($color-1, 20%);
+    opacity: 0.4;
+    bottom: -15px;
+    left:0;
+  }
+    &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    // border-radius: 50%;
+    // background-color: darken($color-1, 20%);
+    bottom: 0;
+    left:0;
+    transition: .6s;
+  }
+&:hover{
+  background-color:$color-1;
+  &:before{
+    // background-color:$color-1;
+    width: 100%;
+    z-index:-1;
+  }
+}
+
+}
+
+
+
+
+
+.box__description {
+    flex-basis:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px; 
+    background-color: $color-3;
+    font-size:1.5rem;
+}
+.description__content{
+ align-text:center;
+}
+.box__icons{
+display:flex;
+justify-content:space-around;
+}
+.portfolio__icon{
+margin:5px;
+}
+
+/* KONTAKT */
+.contact{
+  position:relative;
+    background-color:$color-5;
+  color:$color-2;
+      display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding-top:70px;
+    font-size:1.5rem;
+}
+.contact__header{
+  border-color:$color-2;
+  position:absolute;
+  top:0px;
+  left:20px;
+  &::after,
+     &::before {
+        background-color: $color-5;
+    }
+}
+.contact__method{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.method__mail{
+margin:20px;
+}
+.method__social{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+margin:10px;
+padding:0;
+}
+.social__elem{
+list-style-type:none;
+text-align:center;
+}
+.social__header{
+text-transform:uppercase;
+margin:5px;
+
+
+}
+.social__icon{
+font-size:2.5rem;
+
+}
+
+.contact__address{
+
+}
+
+#map {
+        width: 100vw;
+        height: 200px;
+        background-color: grey;
+        // margin:0 -20px 0px-20px;
+      }
+
+.contact__method{
+
+}
+
+
+/* FOOTER */
+
+.page__footer{
+  background-color: $color-2;
+ height:auto;
+ font-size:1.5rem;
+ // margin:20px -20px 0px -20px;
+}
+.footer__content{
+  font-family: 'Raleway', sans-serif;
+  margin:0;
+  padding:5px;
+  text-align:center;
+  color:$color-5;
+}

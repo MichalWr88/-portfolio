@@ -1,0 +1,70 @@
+// headers style
+.page__header {
+    background-color: $color-5;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $main-top;
+    // padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    color: $color-2;
+}
+
+.page__name {
+    flex-basis: 80%;
+    .trim {
+        display: none;
+    }
+}
+
+.header__nav {
+    flex: 0 0 20%;
+    align-self: center;
+    position: relative;
+}
+
+.nav__hamburger {
+    @extend .btn;
+    
+    font-size: 1.5rem;
+    color: $color-2;
+        
+
+    &:focus~.nav__list {
+        display: block;
+    }
+}
+
+.nav__list {
+    position: absolute;
+    padding: 0px 20px 30px 50px;
+    margin: 0;
+    right: -20px;
+    top: 44px;
+    background-color: $color-5;
+    height: auto;
+    font-size: 1.5rem;
+    display: none;
+    border-bottom-left-radius: 100%;
+    border-top-left-radius: 1%;
+    text-align: right;
+    transition: all 0.5s;
+}
+
+.list__elem {
+
+    list-style-type: none;
+}
+
+.elem__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-4;
+    display: block;
+    padding: 10px 0;
+}
