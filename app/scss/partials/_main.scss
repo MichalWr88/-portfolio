@@ -170,6 +170,51 @@ bottom:20px;
 left:50%;
 transform:translateX(-50%);
   margin:0 auto;
+  background-color:transparent;
+    font-size: 16px;
+  font-weight: 900;
+   text-decoration: none;
+  text-transform: uppercase;
+  color: $color-3;
+    overflow: hidden;
+  border: none;
+  cursor:pointer;
+  padding:5px;
+
+&:before,
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $color-3;
+    transition: all .25s ;
+    content: '';
+
+  }
+  &:before {
+    left: 0;
+    top: 0;
+  }
+  &:after {
+    right: 0;
+    bottom: 0;
+  }
+
+&:hover{
+  &:after{
+    left: 0;
+    top: 0;
+    width:10%;
+    transition: all .25s ;
+  }
+  &:before{
+    right: 0;
+    top: 0;
+    width:10%;
+    transition: all .25s ;
+  }
+}
+
 }
 /* PORTFOLIO */
 
@@ -239,7 +284,7 @@ border-radius:5px;
   width:50px;
   margin:10px 20px;
   background-color:$color-5;
-  color:$color-1;
+  color:$color-2;
 transition: .6s;
 
 
@@ -247,32 +292,25 @@ transition: .6s;
     content: "";
     display: block;
     position: absolute;
-    width: 102%;
-    height: 10%;
-    border-radius: 50%;
+    width: 100%;
+    height: 15%;
+    border-radius: 45%;
     background-color: darken($color-1, 20%);
     opacity: 0.4;
-    bottom: -15px;
+    bottom: -10px;
     left:0;
-  }
-    &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    // border-radius: 50%;
-    // background-color: darken($color-1, 20%);
-    bottom: 0;
-    left:0;
+    right:0;
     transition: .6s;
+    margin:0 auto;
   }
+
 &:hover{
-  background-color:$color-1;
-  &:before{
-    // background-color:$color-1;
-    width: 100%;
-    z-index:-1;
+  transform:scale(1.1);
+  &:after {
+    opacity: 0.2;
+    bottom: -12px;
+    width: 80%;
+    margin:0 auto;
   }
 }
 
@@ -361,7 +399,7 @@ font-size:2.5rem;
 }
 
 #map {
-        width: 100vw;
+        width: 100%;
         height: 200px;
         background-color: grey;
         // margin:0 -20px 0px-20px;
