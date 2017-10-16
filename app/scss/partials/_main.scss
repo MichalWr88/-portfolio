@@ -11,6 +11,7 @@
     // background-color:$color-3;
     // z-index:99999999;
 
+
 }
 
 .banner__wrapper {
@@ -76,6 +77,7 @@ text-shadow:1px 1px 5px  red;
 .about{
   background-color:$color-4;
   padding:20px;
+
 }
 .about__profile{
   background-image: url('../images/profile.jpg');
@@ -91,6 +93,8 @@ text-shadow:1px 1px 5px  red;
   text-align:justify;
   line-height:1.8rem;
   text-indent: 30px;
+      max-width:1200px;
+    margin:0 auto;
 
 }
 .about__courses{
