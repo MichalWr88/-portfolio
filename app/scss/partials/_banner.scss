@@ -1,0 +1,73 @@
+.banner {
+    height: calc(100vh - #{$main-top});
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    // background-color:$color-3;
+    // z-index:99999999;
+
+
+}
+
+.banner__wrapper {
+    position: relative;
+    height: auto;
+    overflow: hidden; // height:1px;
+    // box-shadow:0px 0px 30px 2px $color-5;
+}
+
+.banner__header {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding: 0;
+    letter-spacing: 0rem;
+    margin: 0;
+
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        height: 15px;
+        background-color: $color-5;
+    }
+    &::after {
+        bottom: -8px;
+        left: 0;
+        right: 0;
+    }
+    &::before {
+        top: -8px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.banner__workplace {
+    font-family: 'Raleway', sans-serif;
+    z-index: 3;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0; // bottom: 40%;
+    padding: 5px 0;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 1.8rem;
+    background-color: $color-3;
+    text-transform: uppercase;
+}
+.banner__info{
+font-size:3.5rem;
+text-transform:uppercase;
+text-shadow:1px 1px 5px  red;
+}
+.banner__start {
+    @extend .btn;
+    font-size: 2rem;
+}
