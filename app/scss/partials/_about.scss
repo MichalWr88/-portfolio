@@ -40,3 +40,23 @@ font-size:1.5rem;
 line-height:1.8rem;
 margin-bottom:5px;
 }
+.slider{
+
+}
+.slider__list{
+  display:flex;
+  justify-content:flex-start;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  overflow:hidden;
+  padding:0;
+  list-style-type:none;
+
+}
+.slider__elem{
+}
+.slider__img{
+  width:250px;
+  height:auto;
+
+}
