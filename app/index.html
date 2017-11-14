@@ -59,6 +59,7 @@
             <p class="banner__info">Strona w budowie</p>
             <button class="banner__start">Start</button>
         </section>
+
         <!-- ABOUT -->
         <section id="about" class="about">
             <h3 class="section__header">O mnie</h3>
@@ -98,6 +99,10 @@
     <li class="slider__elem"><img class="slider__img" src="images/slider/12.jpg" alt=""></li>
     <li class="slider__elem"><img class="slider__img" src="images/slider/13.jpg" alt=""></li>
 </ul>
+<button class="slider__btn--prev" title="button Previosly picture"></button>
+    <button class="slider__btn--next" title="button Next picture"></button>
+    <ul class="slider__pagination">
+    </ul>
                 </div>
             </article>
         </section>
@@ -109,9 +114,9 @@
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/html-5.svg" alt="">
                     <div class="skills__details">
-                        Używam semantycznej składni html5
-                        dbam o jakosc kodu, staram sie ogranicza ilośc znaczników w kodzie,
-                        wiem jak korzystac z geolokalizacji zapisywac dane w localstorage i sesionstorage
+                        semantyczny kod html5
+                        wykorzystywanie geolokalizacji 
+                        zapisywac danych w localstorage
                     </div>
                     
                 </li>
@@ -120,8 +125,9 @@
                     <img class="skills__icon" src="images/css-3.svg" alt="">
                         <img class="skills__icon skills__icon-sm" src="images/Sass.svg" alt="">
                     <div class="skills__details">
-                        Wiem jak korzystac z animacji, Media Querys, umiem staram sie Pixel Perfext
-                        korzystam z preprocesor SASS oraz staram sie korzystac z mixin-ow oraz funkcji wbudowanych w preprocesor
+                        Wiem jak korzystac z animacji, Media Querys, 
+                        Zawsze staram sieprojekty tworzyć w podejsciu  "Pixel Perfekt"
+                        korzystam z preprocesor SASS wykorzystujac mixin-y oraz funkcje wbudowanych w preprocesor
                     </div>
                 </li>
                 <!-- JavaScript  -->
@@ -129,23 +135,28 @@
                     <img class="skills__icon" src="images/javascript_logo.svg" alt="">
                         <img class="skills__icon" src="images/es6.png" alt="">
                     <div class="skills__details">
-                        semantyka Html5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsam, possimus fugiat tempora similique nam sit voluptates consequatur ea quia.
+                        nowe metody ze standardu ES6 nie są mi obce
+                        wiem co to funkcja fat arow i jakie ma korzysci i wady przy projektowaniu obiektowym
+                        znam dziedzicznie prototypowe
+                        wiem jak wysłac zapytanie do API oraz odebrac objekt Promise
                     </div>
                 </li>
                  <!-- jQuery  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/jquery-original-wordmark.svg" alt="">
                     <div class="skills__details">
-                        Starm się używac semantycznej składni html5 dbam o jakosc kodu staram sie nie horowac na divitilis umiem wykonac podstawowoe rzeczy z html canvas, mialem do czynienia z Api google maps wiem jak poprawnie dolaczac pliki SVG w zalenosci od wykorzystania potrzeb wiem jak korzystac z geolokalizacji zapisywac dane w localstorage i sesionstorage sdasdasdasd sadd a asd dasasd sad adaasd asdasdasd sdaa das a saadasda as sadasdasd dsfdsfdsfdsf
+                        znam umiem wyslac zapytanie za pomoca Ajaxa....
                         <img class="skills__icon" src="images/AJAX.svg" alt="">
                     </div>
-                    <button class="skills__btn">more</button>
+                    
                 </li>
                 <!-- React  -->
                 <li class="skills__elem">
                     <img class="skills__icon skills__icon-sm" src="images/react.svg" alt="">
                     <div class="skills__details">
-                        Starm się używac semantycznej składni html5 dbam o jakosc kodu staram sie nie horowac na divitilis umiem wykonac podstawowoe rzeczy z html canvas, mialem do czynienia z Api google maps wiem jak poprawnie dolaczac pliki SVG w zalenosci od wykorzystania potrzeb wiem jak korzystac z geolokalizacji zapisywac dane w localstorage i sesionstorage sdasdasdasd sadd a asd dasasd sad adaasd asdasdasd sdaa das a saadasda as sadasdasd dsfdsfdsfdsf
+                        wiem czym są componenty czym roznia sie props od state, jak tworzyc componenty za pomoca klas ES6
+                        podstawy ract redux
+                        oraz reac router
                     </div>
                     <button class="skills__btn">more</button>
                 </li>
@@ -154,7 +165,7 @@
                     <img class="skills__icon" src="images/wordpress-plain-wordmark.svg" alt="">
                     <button class="skills__btn">more</button>
                     <div class="skills__details">
-                        Starm się używac semantycznej składni html5 dbam o jakosc kodu staram sie nie horowac na divitilis umiem wykonac podstawowoe rzeczy z html canvas, mialem do czynienia z Api google maps wiem jak poprawnie dolaczac pliki SVG w zalenosci od wykorzystania potrzeb wiem jak korzystac z geolokalizacji zapisywac dane w localstorage i sesionstorage sdasdasdasd sadd a asd dasasd sad adaasd asdasdasd sdaa das a saadasda as sadasdasd dsfdsfdsfdsf
+                        Podstawowa znajomosc jezyka php wiem jak zainstalowac wordpresa na serwerze oraz wykonac podstawowe czynnosci zmieniajace wyglad strony
                     </div>
                 </li>
                 <!-- Boostrap  -->
@@ -162,7 +173,7 @@
                     <img class="skills__icon" src="images/Boostrap_logo.svg" alt="">
                     <button class="skills__btn">more</button>
                     <div class="skills__details">
-                        Starm się używac semantycznej składni html5 dbam o jakosc kodu staram sie nie horowac na divitilis umiem wykonac podstawowoe rzeczy z html canvas, mialem do czynienia z Api google maps wiem jak poprawnie dolaczac pliki SVG w zalenosci od wykorzystania potrzeb wiem jak korzystac z geolokalizacji zapisywac dane w localstorage i sesionstorage sdasdasdasd sadd a asd dasasd sad adaasd asdasdasd sdaa das a saadasda as sadasdasd dsfdsfdsfdsf
+                        poznalem nazewnictwo class w bootstrapie umiem na jego podstawie szybko zbudowac szkielet responsywnej strony
                     </div>
                 </li>
                 <!-- Boostrap  -->
@@ -187,12 +198,11 @@
                     <a class="box__link" href="">code</a>
                 </div>
                 <div class="box__description">
-                    <p class="description__content">portfolio zawierajace najwazniejsze informacje oraz zbior najciekawszych wykonanych projektow</p>
+                    <p class="description__content">portfolio zawierajace dotchczsowe prace</p>
                     <div class="box__icons">
                         <span class="portfolio__icon"><img class="skills__icon" src="images/sublime-icon.svg" alt=""></span>
                         <span class="portfolio__icon"><img class="skills__icon" src="images/sublime-icon.svg" alt=""></span>
-                        <span class="portfolio__icon"><img class="skills__icon" src="images/sublime-icon.svg" alt=""></span>
-                        <span class="portfolio__icon"><img class="skills__icon" src="images/sublime-icon.svg" alt=""></span>
+
                     </div>
                 </div>
             </article>
@@ -222,15 +232,13 @@
                     <div class="box__icons">
                         <span class="portfolio__icon">html5</span>
                         <span class="portfolio__icon">sass</span>
-                        <span class="portfolio__icon">jQuery</span>
-                        <span class="portfolio__icon">RWD</span>
-                        <span class="portfolio__icon">GuLP</span>
+
                     </div>
                 </div>
             </article>
             <article class="portfolio__box">
                 <div class="box__content">
-                    <h4 class="box__name">to do list</h4>
+                    <h4 class="box__name">to do list <br/>vanilla.js</h4>
                     <a class="box__link" href="">live</a>
                     <a class="box__link" href="">code</a>
                 </div>
@@ -291,20 +299,20 @@
                 <ul class="method__social">
                     <li class="social__elem">
                         <a href="https://www.linkedin.com/in/micha%C5%82-maleszewski-wroclaw/" title="link do profilu na linkedin">
-                            <h4 class="social__header">linkedin</h4>
                             <span class="icon-linkedin social__icon"></span>
+                            <h4 class="social__header">linkedin</h4>
                         </a>
                     </li>
                     <li class="social__elem">
                         <a href="https://github.com/MichalWr88" title="link do profilu na GitHub">
-                            <h4 class="social__header">github</h4>
                             <span class="icon-github social__icon"></span>
+                            <h4 class="social__header">github</h4>
                         </a>
                     </li>
                     <li class="social__elem">
                         <a href="https://www.instagram.com/maleszewski.m/?hl=pl" title="link do profilu na Instagrm">
-                            <h4 class="social__header">instagram</h4>
                             <span class="icon-instagram social__icon"></span>
+                            <h4 class="social__header">instagram</h4>
                         </a>
                     </li>
                 </ul>
