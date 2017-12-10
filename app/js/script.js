@@ -1,5 +1,41 @@
 /* header element*/
 
+(function(){
+    let carusel = document.getElementById('slider'),
+        items = carusel.querySelectorAll('.slider__elem'),
+        tabItems = Array.from(items),
+        btnNext = carusel.querySelector('.slider__btn--next');
+
+        btnNext.addEventListener('click', function(){
+            let item = carusel.querySelector('.slider__elem-first');
+                // nextelem = item.nextElementSibling;
+                
+                item.className = 'slider__elem';
+
+                newStart = nextItem(item);
+                newStart.className = 'slider__elem-first';
+       
+       for (j=2;j<=tabItems.length;++j){
+   newStart = nextItem(newStart);
+   newStart.style.order = j; 
+  }         
+
+      
+        }, false)
+
+function nextItem(el){
+    console.log(el.nextElementSibling);
+ if (el.nextElementSibling.length>0){
+  return el.nextElementSibling;
+ } else {
+  return tabItems[0];
+}
+}
+        
+})();
+
+
+
 console.clear();
 
 // const git = pegasus('https://api.github.com/users/MichalWr88/repos');
@@ -20,11 +56,11 @@ console.clear();
 
 
 function initMap() {
-    var uluru = { lat: 51.1103492, lng: 17.0342441 };
+    const cord = { lat: 51.1103492, lng: 17.0342441 };
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: uluru,
+        center: cord,
         title: 'Wrocław',
         styles: [{
                 "featureType": "water",
@@ -114,7 +150,7 @@ function initMap() {
         ]
     });
     var marker = new google.maps.Marker({
-        position: uluru,
+        position: cord,
         map: map
     });
 }

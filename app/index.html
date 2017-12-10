@@ -62,7 +62,7 @@
 
         <!-- ABOUT -->
         <section id="about" class="about">
-            <h3 class="section__header">O mnie</h3>
+            <h3 class="about__header">O mnie</h3>
             <div class="about__profile"></div>
             <article class="profile__content">
                 <p>Witam.</p>
@@ -80,13 +80,13 @@
                     <li class="courses__elem"><strong>IT&;Business Traning</strong> Kurs Excel VBA 30 dni - <em>01.2016</em></li>
                 </ul>
             </article>
-            <article>
-                <h4>hobby</h4>
-                <span>w wolnych chwilach staram sie rozwijac zainteresowania zwiazane z fotografią </span>
- <div class ="slider">
+            <article class="about__hobby">
+                <h4 class="hobby__header">hobby</h4>
+                <span class="hobby__desc">w wolnych chwilach staram sie rozwijac zainteresowania zwiazane z fotografią </span>
+ <div class ="slider" id="slider">
 <ul class="slider__list">
     <li class="slider__elem"><img class="slider__img" src="images/slider/1.jpg" alt=""></li>
-    <li class="slider__elem"><img class="slider__img" src="images/slider/2.jpg" alt=""></li>
+    <li class="slider__elem-first"><img class="slider__img" src="images/slider/2.jpg" alt=""></li>
     <li class="slider__elem"><img class="slider__img" src="images/slider/3.jpg" alt=""></li>
     <li class="slider__elem"><img class="slider__img" src="images/slider/4.jpg" alt=""></li>
     <li class="slider__elem"><img class="slider__img" src="images/slider/5.jpg" alt=""></li>
@@ -99,8 +99,9 @@
     <li class="slider__elem"><img class="slider__img" src="images/slider/12.jpg" alt=""></li>
     <li class="slider__elem"><img class="slider__img" src="images/slider/13.jpg" alt=""></li>
 </ul>
-<button class="slider__btn--prev" title="button Previosly picture"></button>
-    <button class="slider__btn--next" title="button Next picture"></button>
+<button class="slider__btn slider__btn--prev" title="button Previosly picture">prev</button>
+
+    <button class="slider__btn slider__btn--next" title="button Next picture">next</button>
     <ul class="slider__pagination">
     </ul>
                 </div>
@@ -108,84 +109,92 @@
         </section>
         <!-- SKILLS -->
         <section id="skills" class="skills">
-            <h3 class="section__header">Umiejetnosci</h3>
+            <div class="header__bg"></div>
+            <h3 class="skills__header">Umiejętności</h3>
             <ul class="skills__list">
               <!-- HTML  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/html-5.svg" alt="">
-                    <div class="skills__details">
+<!--                     <div class="skills__details">
                         semantyczny kod html5
                         wykorzystywanie geolokalizacji 
                         zapisywac danych w localstorage
-                    </div>
+                    </div> -->
                     
                 </li>
                 <!-- CSS  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/css-3.svg" alt="">
                         <img class="skills__icon skills__icon-sm" src="images/Sass.svg" alt="">
-                    <div class="skills__details">
+<!--                     <div class="skills__details">
                         Wiem jak korzystac z animacji, Media Querys, 
                         Zawsze staram sieprojekty tworzyć w podejsciu  "Pixel Perfekt"
                         korzystam z preprocesor SASS wykorzystujac mixin-y oraz funkcje wbudowanych w preprocesor
-                    </div>
+                    </div> -->
                 </li>
                 <!-- JavaScript  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/javascript_logo.svg" alt="">
                         <img class="skills__icon" src="images/es6.png" alt="">
-                    <div class="skills__details">
+<!--                     <div class="skills__details">
                         nowe metody ze standardu ES6 nie są mi obce
                         wiem co to funkcja fat arow i jakie ma korzysci i wady przy projektowaniu obiektowym
                         znam dziedzicznie prototypowe
                         wiem jak wysłac zapytanie do API oraz odebrac objekt Promise
-                    </div>
+                    </div> -->
                 </li>
                  <!-- jQuery  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/jquery-original-wordmark.svg" alt="">
-                    <div class="skills__details">
-                        znam umiem wyslac zapytanie za pomoca Ajaxa....
                         <img class="skills__icon" src="images/AJAX.svg" alt="">
-                    </div>
+<!--                     <div class="skills__details">
+                        znam umiem wyslac zapytanie za pomoca Ajaxa....
+                    </div> -->
                     
                 </li>
                 <!-- React  -->
                 <li class="skills__elem">
                     <img class="skills__icon skills__icon-sm" src="images/react.svg" alt="">
-                    <div class="skills__details">
+<!--                     <div class="skills__details">
                         wiem czym są componenty czym roznia sie props od state, jak tworzyc componenty za pomoca klas ES6
                         podstawy ract redux
                         oraz reac router
-                    </div>
-                    <button class="skills__btn">more</button>
+                    </div> -->
+                    
                 </li>
                  <!-- WordPress  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/wordpress-plain-wordmark.svg" alt="">
-                    <button class="skills__btn">more</button>
+<!--                     <button class="skills__btn">more</button>
                     <div class="skills__details">
                         Podstawowa znajomosc jezyka php wiem jak zainstalowac wordpresa na serwerze oraz wykonac podstawowe czynnosci zmieniajace wyglad strony
-                    </div>
+                    </div> -->
                 </li>
                 <!-- Boostrap  -->
                 <li class="skills__elem">
                     <img class="skills__icon" src="images/Boostrap_logo.svg" alt="">
-                    <button class="skills__btn">more</button>
+<!--                     <button class="skills__btn">more</button>
                     <div class="skills__details">
                         poznalem nazewnictwo class w bootstrapie umiem na jego podstawie szybko zbudowac szkielet responsywnej strony
-                    </div>
+                    </div> -->
                 </li>
                 <!-- Boostrap  -->
                 <li class="skills__elem">
-                    <h4>korzystan takze</h4>
+                   <!--  <h4>korzystan takze</h4> -->
                     <img class="skills__icon" src="images/sublime-icon.svg" alt="">
-                    <img class="skills__icon" src="images/babel-plain.svg" alt="">
-                    <img class="skills__icon" src="images/gulp.svg" alt="">
-                    <img class="skills__icon" src="images/npm-logo.svg" alt="">
-                    <img class="skills__icon" src="images/webpack.svg" alt="">
-                    <img class="skills__icon" src="images/typescript-original.svg" alt="">
                 </li>
+                 <li class="skills__elem">
+                    <img class="skills__icon" src="images/babel-plain.svg" alt="">
+                    </li>
+                     <li class="skills__elem">
+                    <img class="skills__icon" src="images/gulp.svg" alt="">
+                    </li>
+                     <li class="skills__elem">
+                    <img class="skills__icon" src="images/npm-logo.svg" alt="">
+                    </li>
+                     <li class="skills__elem">
+                    <img class="skills__icon" src="images/webpack.svg" alt="">
+                    </li>
             </ul>
         </section>
         <!-- PORTFOLIO -->
@@ -193,11 +202,11 @@
             <h2 class="section__header portfolio__header">Portfolio</h2>
             <article class="portfolio__box">
                 <div class="box__content">
-                    <h4 class="box__name">Michał Maleszewski</h4>
                     <a class=" btn-border box__link" href="">live</a>
                     <a class="box__link" href="">code</a>
                 </div>
                 <div class="box__description">
+                    <h4 class="box__name">Michał Maleszewski</h4>
                     <p class="description__content">portfolio zawierajace dotchczsowe prace</p>
                     <div class="box__icons">
                         <span class="portfolio__icon"><img class="skills__icon" src="images/sublime-icon.svg" alt=""></span>
@@ -207,13 +216,13 @@
                 </div>
             </article>
             <article class="portfolio__box">
-                <div class="box__content">
-                    <h4 class="box__name">weekly webdev challenge-1</h4>
+                <div class="box__content" id="portfolio__wwdc1">
                     <a class="box__link" href="">live</a>
                     <a class="box__link" href="">code</a>
                 </div>
                 <div class="box__description">
-                    <p class="description__content">zadanie 1 z grupy <a href="">weekly webdev challenge</a> polegajace na zakodowaniu pliku PSD,zawierajacego kilka formularzy, zastosowano RWD napisano validacje fomularzy w czytsym JS przy podejsciu obiektowym </p>
+                    <h4 class="box__name">weekly webdev challenge-1</h4>
+                    <p class="description__content" >zadanie 1 z grupy <a href="">weekly webdev challenge</a> polegajace na zakodowaniu pliku PSD,zawierajacego kilka formularzy, zastosowano RWD napisano validacje fomularzy w czytsym JS przy podejsciu obiektowym </p>
                     <div class="box__icons">
                         <span class="portfolio__icon">html5</span>
                         <span class="portfolio__icon">css3</span>
@@ -222,12 +231,12 @@
                 </div>
             </article>
             <article class="portfolio__box">
-                <div class="box__content">
-                    <h4 class="box__name"> NASA_API</h4>
+                <div class="box__content" id="portfolio_nasa">
                     <a class="box__link" href="">live</a>
                     <a class="box__link" href="">code</a>
                 </div>
                 <div class="box__description">
+                    <h4 class="box__name"> NASA_API</h4>
                     <p class="description__content">Zadanie z warsztatów CodersLab polegajace na napisaniu strony ktora za pomoca Ajax-a bedzie pobierac losowe zdjecia z <a href="">NASA API</a> wraz z ich opisem, tworzac galerie. </p>
                     <div class="box__icons">
                         <span class="portfolio__icon">html5</span>
@@ -237,12 +246,12 @@
                 </div>
             </article>
             <article class="portfolio__box">
-                <div class="box__content">
-                    <h4 class="box__name">to do list <br/>vanilla.js</h4>
+                <div class="box__content" id="portfolio_todo">
                     <a class="box__link" href="">live</a>
                     <a class="box__link" href="">code</a>
                 </div>
                 <div class="box__description">
+                    <h4 class="box__name">to do list <br/>vanilla.js</h4>
                     <p class="description__content">strona pozwala dodac kilka list zadan w kazdej liscie jest mozliwosc dodawania tasków do wykonania, listy sa zapisywane w LOcalstrorage tak aby po wyjsciu ze strony zadania dalej byly dostepne</p>
                     <div class="box__icons">
                         <span class="portfolio__icon">html5</span>
