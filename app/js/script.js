@@ -2,35 +2,60 @@
 
 (function(){
     let carusel = document.getElementById('slider'),
-        items = carusel.querySelectorAll('.slider__elem'),
-        tabItems = Array.from(items),
-        btnNext = carusel.querySelector('.slider__btn--next');
-
+        list = document.querySelector('.slider__list').children,
+        items = document.querySelector('.slider__list').children,
+        tabItems = Array.from(list),
+        btnNext = carusel.querySelector('.slider__btn--next'),
+        btnPrev = carusel.querySelector('.slider__btn--prev');
         btnNext.addEventListener('click', function(){
-            let item = carusel.querySelector('.slider__elem-first');
-                // nextelem = item.nextElementSibling;
-                
+        
+            let item = carusel.querySelector('.slider__elem-first'),
+                nextElem = item.nextElementSibling;
                 item.className = 'slider__elem';
 
-                newStart = nextItem(item);
-                newStart.className = 'slider__elem-first';
-       
-       for (j=2;j<=tabItems.length;++j){
-   newStart = nextItem(newStart);
-   newStart.style.order = j; 
-  }         
+                if(nextElem  == null){
+                nextElem = items[0];    
+                }
+                nextElem.className = 'slider__elem-first';
+                nextElem.style.order = '1';
+                
+                
 
-      
+for (j = 2; j <= items.length+1; ++j) {
+        nextElem = nextElem.nextElementSibling;
+    if (nextElem == null) {
+        nextElem = items[0];
+    }
+    nextElem.style.order = j.toString();
+}
+     // list.classList.remove('is-back');
+        }, false);
+
+
+        btnPrev.addEventListener('click', function(){
+            let item = carusel.querySelector('.slider__elem-first'),
+                nextElem = item.previousElementSibling;
+                item.className = 'slider__elem';
+                
+                if(nextElem  == null){
+                nextElem = items[items.length+1];    
+                }
+                nextElem.className = 'slider__elem-first';
+                nextElem.style.order = '1';
+                
+
+for (j = 2; j <= items.length+1; ++j) {
+        nextElem = nextElem.previousElementSibling;
+    if (nextElem == null) {
+        nextElem = items[items.length-1];
+        console.log(items[11]);
+    }
+    nextElem.style.order = j.toString();
+}
+     
         }, false)
 
-function nextItem(el){
-    console.log(el.nextElementSibling);
- if (el.nextElementSibling.length>0){
-  return el.nextElementSibling;
- } else {
-  return tabItems[0];
-}
-}
+
         
 })();
 

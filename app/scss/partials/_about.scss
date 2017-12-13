@@ -47,13 +47,16 @@ margin-bottom:5px;
 
 /* HOBBY */
 .about__hobby{
-
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 .hobby__header{
   font-size:2.0rem;
 text-transform:uppercase;
 margin:10px 0;
 color:$color-5;
+width:100%;
 }
 .slider{
   // display:flex;
@@ -64,11 +67,9 @@ color:$color-5;
   // overflow:hidden;
   // padding:0;
   position:relative;
-  // height:400px;
-   display:flex;
- width:150px;
- // overflow:hidden;
- border:1px solid white;
+  width:100%;
+  height:200px;
+ overflow:hidden;
 
 }
 .slider__list{
@@ -83,25 +84,28 @@ color:$color-5;
  display:flex;
  list-style:none;
  padding:0;
- width:350px;
+ width:100%;
  position:relative;
- left:-50px;
+ // left:-50px;
+ transition: .5s ease-in-out;
 }
 .slider__elem{
- // display:inline-block;
- // width:350px;
+ display:inline-block;
+ width:350px;
  order:2;
-  height:400px;
-
+transition: .5s ease-in-out;
  &-first{
   order:1;
-  height:400px;
+  width:350px;
+  transition: .5s ease-in-out;
+
  }
 }
 
 .slider__img{
-  width:150px;
-  height:auto;
+  width:300px;
+  // height:auto;
+  transition: .5s ease-in-out;
 
 }
 .slider__btn{
@@ -125,4 +129,13 @@ color:$color-5;
     left:0;
     top:50%;
   }
+}
+
+.is-steady{
+ transform:none;
+ transition:transform 1s ease-in-out;
+}
+
+.is-back{
+  transform:translateX(-300px);
 }
