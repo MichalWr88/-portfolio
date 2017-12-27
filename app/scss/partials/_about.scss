@@ -10,10 +10,12 @@
 .about__profile{
   background-image: url('../images/profile.jpg');
   background-size:cover;
+  background-position:top;
   width:200px;
-  height:200px;
-  border-radius:50%;
+  height:220px;
+  // border-radius:50%;
    margin:0 auto;
+   clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
 }
 .profile__content{
   font-size:1.5rem;
