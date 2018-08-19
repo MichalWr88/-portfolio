@@ -1,5 +1,66 @@
 /* header element*/
 
+(function(){
+    let carusel = document.getElementById('slider'),
+        list = document.querySelector('.slider__list').children,
+        items = document.querySelector('.slider__list').children,
+        tabItems = Array.from(list),
+        btnNext = carusel.querySelector('.slider__btn--next'),
+        btnPrev = carusel.querySelector('.slider__btn--prev');
+        btnNext.addEventListener('click', function(){
+        
+            let item = carusel.querySelector('.slider__elem-first'),
+                nextElem = item.nextElementSibling;
+                item.className = 'slider__elem';
+
+                if(nextElem  == null){
+                nextElem = items[0];    
+                }
+                nextElem.className = 'slider__elem-first';
+                nextElem.style.order = '1';
+                
+                
+
+for (j = 2; j <= items.length+1; ++j) {
+        nextElem = nextElem.nextElementSibling;
+    if (nextElem == null) {
+        nextElem = items[0];
+    }
+    nextElem.style.order = j.toString();
+}
+     // list.classList.remove('is-back');
+        }, false);
+
+
+        btnPrev.addEventListener('click', function(){
+            let item = carusel.querySelector('.slider__elem-first'),
+                nextElem = item.previousElementSibling;
+                item.className = 'slider__elem';
+                
+                if(nextElem  == null){
+                nextElem = items[items.length+1];    
+                }
+                nextElem.className = 'slider__elem-first';
+                nextElem.style.order = '1';
+                
+
+for (j = 2; j <= items.length+1; ++j) {
+        nextElem = nextElem.previousElementSibling;
+    if (nextElem == null) {
+        nextElem = items[items.length-1];
+        console.log(items[11]);
+    }
+    nextElem.style.order = j.toString();
+}
+     
+        }, false)
+
+
+        
+})();
+
+
+
 console.clear();
 
 // const git = pegasus('https://api.github.com/users/MichalWr88/repos');
@@ -20,11 +81,11 @@ console.clear();
 
 
 function initMap() {
-    var uluru = { lat: 51.1103492, lng: 17.0342441 };
+    const cord = { lat: 51.1103492, lng: 17.0342441 };
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: uluru,
+        center: cord,
         title: 'Wrocław',
         styles: [{
                 "featureType": "water",
@@ -114,7 +175,7 @@ function initMap() {
         ]
     });
     var marker = new google.maps.Marker({
-        position: uluru,
+        position: cord,
         map: map
     });
 }

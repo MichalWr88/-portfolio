@@ -1,5 +1,38 @@
 // /* mixins */
 
+@mixin sHeader($cText, $cBG) {
+	 position: relative;
+    font-family: $cText;
+    font-size: 2.0rem;
+    width: 50%;
+    color:$cText;
+    margin:20px 0;
+    min-width:200px;
+    max-width:300px;
+    padding: 5px 0;
+    border: 3px solid $cText;
+    text-align: center;
+    border-radius:5px;
+    text-transform:uppercase;
+
+    &::after,
+     &::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        background-color: $cBG;
+        width: 30%;
+    }
+
+    &::after {
+        bottom: -3px;
+        left: 50%;
+    }
+    &::before {
+        top: -3px;
+        rightt: 50%;
+    }
+}
 // @mixin arrow($direction) {
 //     &::after {
 //         content: "";
